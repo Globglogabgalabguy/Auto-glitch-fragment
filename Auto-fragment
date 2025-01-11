@@ -1,0 +1,11 @@
+for i = 1, 5 do
+    local stopit = false
+    task.delay(5, function()
+        stopit = true
+    end)
+    repeat
+        wait()
+        game.Players.LocalPlayer.Character:PivotTo(CFrame.new(999.012756, -100, -28.38331481)) -- just tps u into the void
+    until stopit
+    task.wait(7) -- Wait for 7 seconds before repeating
+end
